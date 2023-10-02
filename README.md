@@ -75,8 +75,11 @@ O sistema não foi feito pensando apenas em mule-app. Veja no arquivo .env que v
                   ------------------------------------------------
 
                   Neste exemplo, 
-                  havia um arquivo de um projeto mule-app na pasta IN ele identificou, abriu varreu procurando arquivo .xml encontrou e processou buscando 
-                  informações dentro deste arquivo que tivesse uma interseção com <flow name=
+                  havia um arquivo.zip de um projeto mule-app na pasta IN,  identificou, abriu o arquivo em  busca
+                  de arquvivos com extensão .xml que ao encontrar, iniciou seu processamento procurando o contexto
+                  <flow name=, uma vez encontrado (podendo ser 1 ou mais), o processamento inicia uma série de le-
+                  vantamento de informações técnicas e de negócios que após processa-lo, terá como a saída, um ar-
+                  arquivo .csv como relatório para cada projeto processado.
 
 Até a proxima...
 
