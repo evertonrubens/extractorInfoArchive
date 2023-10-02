@@ -1,0 +1,5 @@
+.idea/*
+*.log
+in/*
+out/*
+report/*
