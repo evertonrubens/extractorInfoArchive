@@ -1,0 +1,13 @@
+NOME_PROJETO;DATA_EXTRACAO;HORA_EXTRACAO
+APDEV-FLIGHTS-WS-MAIN.ZIP;2023-10-02;16:23:39
+ARQUIVO_XML;QTD_INCID_ENCONTRA;LINHAS_POR_ARQ;CONTEXTO;CAMINHO_PASTA;CAMINHO_ARQUIVO
+apdev-flights-ws-main/classes/implementation.xml;3;15, 41, 66;<flow name=;apdev-flights-ws-main/classes;D:/Workspace/desenvolvimento/python/extractorInfo/in\apdev-flights-ws-main/classes/implementation.xml
+apdev-flights-ws-main/classes/interface.xml;3;7, 12, 16;<flow name=;apdev-flights-ws-main/classes;D:/Workspace/desenvolvimento/python/extractorInfo/in\apdev-flights-ws-main/classes/interface.xml
+apdev-flights-ws-main/implementation.xml;3;15, 41, 66;<flow name=;apdev-flights-ws-main;D:/Workspace/desenvolvimento/python/extractorInfo/in\apdev-flights-ws-main/implementation.xml
+apdev-flights-ws-main/interface.xml;3;7, 12, 16;<flow name=;apdev-flights-ws-main;D:/Workspace/desenvolvimento/python/extractorInfo/in\apdev-flights-ws-main/interface.xml
+apdev-flights-ws-main/src/main/app/implementation.xml;1;11;<flow name=;apdev-flights-ws-main/src/main/app;D:/Workspace/desenvolvimento/python/extractorInfo/in\apdev-flights-ws-main/src/main/app/implementation.xml
+apdev-flights-ws-main/src/main/app/interface.xml;3;7, 12, 16;<flow name=;apdev-flights-ws-main/src/main/app;D:/Workspace/desenvolvimento/python/extractorInfo/in\apdev-flights-ws-main/src/main/app/interface.xml
+apdev-flights-ws-main/target/classes/implementation.xml;1;11;<flow name=;apdev-flights-ws-main/target/classes;D:/Workspace/desenvolvimento/python/extractorInfo/in\apdev-flights-ws-main/target/classes/implementation.xml
+apdev-flights-ws-main/target/classes/interface.xml;3;7, 12, 16;<flow name=;apdev-flights-ws-main/target/classes;D:/Workspace/desenvolvimento/python/extractorInfo/in\apdev-flights-ws-main/target/classes/interface.xml
+TOTAL_LINHAS_INCID_PROJETO
+20

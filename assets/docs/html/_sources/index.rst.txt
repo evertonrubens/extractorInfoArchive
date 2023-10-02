@@ -1,0 +1,27 @@
+.. ExtratorInfoArchives documentation master file, created by
+   sphinx-quickstart on Mon Oct  2 12:35:17 2023.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Bem vindos (as) ao Doc do ExtractorInfo!
+========================================
+
+Introdução
+==========
+o ExtractInfo é um sistema batch de busca que rastreia determinadas informações e gera um relatório sobre estas info.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   main
+   fileProcessor
+   fileManager
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

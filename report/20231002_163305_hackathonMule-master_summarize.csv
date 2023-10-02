@@ -1,0 +1,7 @@
+NOME_PROJETO;DATA_EXTRACAO;HORA_EXTRACAO
+HACKATHONMULE-MASTER.ZIP;2023-10-02;16:33:05
+ARQUIVO_XML;QTD_INCID_ENCONTRA;LINHAS_POR_ARQ;CONTEXTO;CAMINHO_PASTA;CAMINHO_ARQUIVO
+hackathonMule-master/src/main/app/apessentials.xml;1;13;<flow name=;hackathonMule-master/src/main/app;D:/Workspace/desenvolvimento/python/extractorInfo/in\hackathonMule-master/src/main/app/apessentials.xml
+hackathonMule-master/target/classes/apessentials.xml;1;13;<flow name=;hackathonMule-master/target/classes;D:/Workspace/desenvolvimento/python/extractorInfo/in\hackathonMule-master/target/classes/apessentials.xml
+TOTAL_LINHAS_INCID_PROJETO
+2

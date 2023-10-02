@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>class main &#8212; documentação ExtratorInfoArchives 1.0.0</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=039e1c02" />
+    <script src="_static/documentation_options.js?v=c0c8e3fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/translations.js?v=000972dd"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Buscar" href="search.html" />
+    <link rel="next" title="class fileProcessor" href="fileProcessor.html" />
+    <link rel="prev" title="Bem vindos (as) ao Doc do ExtractorInfo!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-main">
+<span id="class-main"></span><h1>class main<a class="headerlink" href="#module-main" title="Link to this heading">¶</a></h1>
+<dl>
+<dt>Info: Este é ponto de entrada do sistema batch. O main vai cadenciar as orquestrações das operações contidas nas</dt><dd><p>outras classes que compõe este sistema batch.</p>
+<p>O que o sistema faz?</p>
+<blockquote>
+<div><p>Com base nas configurações contidas no arquivo .env, fica ouvindo uma pasta que foi definida pelo usuário
+do sistema. Na estrutura do sistema, deixei o IN, mas pode ser qualquer pasta que você (usuário) definir no
+/config/.env</p>
+<p>Aliá, nesta estrutura, adicionei o .env (arquivo de configuração) justamente para facilitar nossa lógica no
+sistema. Além disso, criamos com isso uma parametrização do sistema.</p>
+<p>Depois, veja o arquivo .env localizado no /config. Da para ser feito muita coisa muito em função destas
+parametrizações. Deixei previamente fácil para:</p>
+<p>IN_FOLDER, OUT_FOLDER, REPORT_FOLDER, TYPE_OF_ARCHIVE, CONTEXT_DESCRIBE, HEADER_REPORT, BODY_REPORT_SUM,
+FOOTER_REPORT, FIELD_NAMES_REPORT e TYPE_REPORT.</p>
+<p>Então o sistema fica ouvindo o path do conteúdo da chave IN_FOLDER e qualquer arquivo .zip que cair nele,
+será processado, de forma a abrir, procurar por arquivos [.xml].
+Se encontrar arquivos [.xml], então dentro de cada arquivo, o sistema deverá buscar pela palavra chave
+CONTEXT_DESCRIBE.
+Este context é para buscar qualquer tipo de informação… No nosso caso, estamos procurando arquivos de
+projetos mule-apps que tenham mais de um &lt;flow name=. Se encontrado, então ele irá obter uma série de
+informações e no final do seu processamento vai criar um relatório .csv sumarizado contextualizando e
+informando ao usuário, nome do projeto, nome de arquivos e endereço destes arquivos que contenham o
+CONTEXT_DESCRIBE procurado, em que linha de cada arquivo encontra este contexto e quantos contexto por
+arquivo foram encontrados e em footer o total de contextos encontrados em um ou mais arquivos.</p>
+</div></blockquote>
+<p>Todas informações parametrizaveis, deverão estar dentro do arquivo .env localizado na pasta config.
+Também estou oferecendo dois tipos de saídas de relatórios em .csv.
+São eles:</p>
+<blockquote>
+<div><p>1 = REPORT LIST (mais simples)</p>
+<p>2 = REPORT SUMMARY (mais complexo, com header, body e footer)</p>
+<p>se a chave: TYPE_REPORT=”2”, então o sistema irá criar um .csv com header, body e footer.</p>
+<p>se a chave: TYPE_REPORT=”1”, então o sistema irá criar um .csv com uma lista completa repetindo algumas
+informaçoes (lista).</p>
+</div></blockquote>
+<p>Tudo aqui pode ser incrementado e ele  não foi  feito  pensando  apenas em mule-app. Veja no arquivo .env,
+Você entenderá.
+Podemos informar qual é o caminho das pastas que ele ficará ouvindo, para qual past irá mover o arquivo
+do IN após o processamento e por fim onde o relatório .csv será armazenado.
+Também é possivel informar  qual tipo de arquivo desejamos pesquisar e o que queremos pesquisar.</p>
+<p>O sistema está desocoplado, de forma que temos um gerenciador (main) e fileManager.py, xmlProcessor.py que são
+especialistas no que foram fundamentado. Assim, se precisarmos ter outras classes especialistas, bastará criarmos
+e adicionar uma lógica no main.</p>
+</dd>
+</dl>
+<p>Autor: Everton Martins
+Dt. 2023-09-27
+version 1.0.0</p>
+<dl class="py data">
+<dt class="sig sig-object py" id="main.BODY_REPORT_SUM">
+<span class="sig-prename descclassname"><span class="pre">main.</span></span><span class="sig-name descname"><span class="pre">BODY_REPORT_SUM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#main.BODY_REPORT_SUM" title="Link to this definition">¶</a></dt>
+<dd><p>Declaração da definição da main() classe principal que irá orquestrar as todas as operações necessárias para o seu bom 
+funcionamento.</p>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">ExtratorInfoArchives</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navegação</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">class main</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#main.BODY_REPORT_SUM"><code class="docutils literal notranslate"><span class="pre">BODY_REPORT_SUM</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fileProcessor.html">class fileProcessor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fileManager.html">class fileManager</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="capítulo anterior">Bem vindos (as) ao Doc do ExtractorInfo!</a></li>
+      <li>Next: <a href="fileProcessor.html" title="próximo capítulo">class fileProcessor</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Busca rápida</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Ir" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Everton Martins.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/main.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
