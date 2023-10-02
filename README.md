@@ -39,6 +39,44 @@ O que o sistema faz?
 
 O sistema não foi feito pensando apenas em mule-app. Veja no arquivo .env que você entenderá. Podemos informar qual é o caminho das pastas que ele ficará ouvindo, para qual pasta irá  mover  os arquivos do IN após o processamento e por fim onde os relatórios .csv serão armazenados. Também é possivel informar qual tipo de arquivo desejamos pesquisar e o que queremos pesquisar. O sistema está desocoplado, de forma que temos um gerenciador (main) e fileManager.py, fileProcessor.py que são especialistas no que  foram fundamentado.  Assim, se precisarmos ter  outras classes especialistas,  bastará criarmos e adicionar uma lógica no main.
 
+##IMPORTANTE:
+    1. Certifique-se de que você tem o python instalado em seu ambiente de trabalho, para isso execute:
+          python --version  ou python3 --version
+          se tiver algum python instalado, o terminal escreverá na sua saída
+          Python 3.8.10 (minha versão até o dia 02/10/2023)
+
+    2. Para executar o sistema, vá até a pasta src do projeto via command / terminal ou via terminal integrado do vscode.
+          execute a instrução: python .\main.py
+          exemplo: c:\pyton\extractorInfo\src> python .\main.py
+
+          Se tiver tudo certinho, vc terá a seguinte saída:
+              PS c:\python\extractorInfo\src> python .\main.py (enter)
+                  
+                  saída do processamento:
+                  ----------------------------------------------
+                  Processamento iniciado em: 2023-10-02-20:06:55 
+                  ----------------------------------------------
+
+                  Variável IN_FOLDER: D:/Workspace/desenvolvimento/python/extractorInfo/in Carregada com sucesso!
+                  Variável  OUT_FOLDER: D:/Workspace/desenvolvimento/python/extractorInfo/out Carregada com sucesso!
+                  Variável  REPORT_FOLDER: D:/Workspace/desenvolvimento/python/extractorInfo/report Carregada com sucesso!
+                  Variável  FIELD_NAMES_REPORT: PROJECT,ARQUIVO_XML,QTD_INCID_ENCONTRA,LINHAS_POR_ARQ,CONTEXTO,CAMINHO_PASTA,CAMINHO_ARQUIVO Carregada com sucesso!
+                  Variável  TYPE_REPORT: 2 Carregada com sucesso!
+                  Variável  HEADER_REPORT: NOME_PROJETO,DATA_EXTRACAO,HORA_EXTRACAO Carregada com sucesso!
+                  Variável  BODY_REPORT_SUM: ARQUIVO_XML,QTD_INCID_ENCONTRA,LINHAS_POR_ARQ,CONTEXTO,CAMINHO_PASTA,CAMINHO_ARQUIVO Carregada com sucesso!
+                  Variável  FOOTER_REPORT: TOTAL_LINHAS_INCID_PROJETO Carregada com sucesso!
+                  Variável  CONTEXT_DESCRIBE: <flow name= Carregada com sucesso!
+                  Variável  TYPE_OF_ARCHIVE: .xml Carregada com sucesso!
+                  Total de arquivos processados: 1 
+
+                  ------------------------------------------------
+                  Processamento finalizado em: 2023-10-02-20:06:55 
+                  ------------------------------------------------
+
+                  Neste exemplo, 
+                  havia um arquivo de um projeto mule-app na pasta IN ele identificou, abriu varreu procurando arquivo .xml encontrou e processou buscando 
+                  informações dentro deste arquivo que tivesse uma interseção com <flow name=
+
 Até a proxima...
 
 Everton Rubens
