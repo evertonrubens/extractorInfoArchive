@@ -39,7 +39,8 @@ O que o sistema faz?
 
 O sistema não foi feito pensando apenas em mule-app. Veja no arquivo .env que você entenderá. Podemos informar qual é o caminho das pastas que ele ficará ouvindo, para qual pasta irá  mover  os arquivos do IN após o processamento e por fim onde os relatórios .csv serão armazenados. Também é possivel informar qual tipo de arquivo desejamos pesquisar e o que queremos pesquisar. O sistema está desocoplado, de forma que temos um gerenciador (main) e fileManager.py, fileProcessor.py que são especialistas no que  foram fundamentado.  Assim, se precisarmos ter  outras classes especialistas,  bastará criarmos e adicionar uma lógica no main.
 
-##IMPORTANTE:
+### IMPORTANTE:
+
     1. Certifique-se de que você tem o python instalado em seu ambiente de trabalho, para isso execute:
           python --version  ou python3 --version
           se tiver algum python instalado, o terminal escreverá na sua saída
