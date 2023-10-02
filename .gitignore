@@ -1,5 +1,9 @@
 .idea/*
-*.log
+logs/*
+!logs/
 in/*
+!in/
 out/*
+!out/
 report/*
+!report/
